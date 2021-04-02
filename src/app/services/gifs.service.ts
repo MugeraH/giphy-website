@@ -33,13 +33,5 @@ export class GifsService {
     );
   }
 
-  // searchGifs(gifName: string) {
-  //   return this.http
-  //     .get(
-  //       `https://api.giphy.com/v1/gifs/search?q=${gifName}&api_key=${environment.giphyApiKey}&limit=10`
-  //     )
-  //     .subscribe((response: any) => {
-  //       this.gifs.next(response.data);
-  //     });
-  // }
+
 }

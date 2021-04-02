@@ -73,7 +73,6 @@
 }
 .title {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   margin-left: 15px;
 }
@@ -86,10 +85,7 @@
   color: white;
 }
 
-.gif-item {
-  /* height: 50px;
-  width: 300px; */
-}
+
 
 .gif-item img {
   height: 200px;
