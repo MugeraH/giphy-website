@@ -6,12 +6,8 @@
     </div>
 
     <div class="navbar-links">
-      <a class="nav-link active" aria-current="page" href="#">Reactions</a>
-      <a class="nav-link" href="#">Entertainment</a>
-      <a class="nav-link" href="#">Sports</a>
-
-      <a class="nav-link" href="#">Artists</a>
-      <a class="nav-link" href="#">:</a>
+      <a class="nav-link active" aria-current="page" href="#">Trending</a>
+      <a class="nav-link" href="#">Search</a>
     </div>
 
     <div class="navbar-buttons">
@@ -34,21 +30,24 @@
     </div>
   </nav>
 
-  <div class="wrapper mb-5">
+  <div class="wrapper mb-5 mt-2">
     <div class="input-group mb-3">
       <input type="text" class="form-control" />
-      <a class="btn" type="button" id="selectBtn"> Search </a>
+      <a class="btn" type="button" id="selectBtn">
+        <img src="../../assets/img/search .png" alt="" />
+      </a>
     </div>
   </div>
 
-  <div class="gif-wrapper">
-    <div class="gif-item m-2" *ngFor="let gif of gifs">
-      <img src="{{ gif.images.downsized.url }}" alt="" />
+  <div class="container">
+    <div class="title">
+      <img src="../../assets/img/trend.png" alt="" />
+      <h3>Trending</h3>
+    </div>
+    <div class="gif-wrapper">
+      <div class="gif-item m-2" *ngFor="let gif of gifs">
+        <img src="{{ gif.images.downsized.url }}" alt="" />
+      </div>
     </div>
   </div>
-
-
-
 </div>
-
-

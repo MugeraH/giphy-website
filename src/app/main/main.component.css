@@ -3,7 +3,6 @@
 }
 
 .nav {
-  background-color: black;
   color: white;
   display: flex;
   align-items: center;
@@ -18,6 +17,7 @@
   border-bottom: 7px solid #32aefb !important;
   margin: 0px 5px;
   padding-bottom: 0;
+  margin-right: 10px;
   color: white;
   font-weight: 700;
 }
@@ -71,6 +71,20 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.title img {
+  height: 25px;
+}
+.title h3 {
+  padding-top: 10px;
+  padding-left: 5px;
+  color: white;
+}
 
 .gif-item {
   /* height: 50px;
@@ -79,4 +93,18 @@
 
 .gif-item img {
   height: 200px;
+}
+
+.wrapper input {
+  height: 50px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrapper a {
+  background-color: #EF6075;
+}
+
+.wrapper a img {
+  padding-top: 5px;
+  height: 30px;
 }

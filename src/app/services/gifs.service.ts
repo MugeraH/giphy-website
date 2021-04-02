@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GifsService {
-  trendingGifUrl: string = environment.trendingUrl;
+  apiKey: string = environment.apiKey;
   gifImages: [];
 
   constructor(private http: HttpClient) {}
