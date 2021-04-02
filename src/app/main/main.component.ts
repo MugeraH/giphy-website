@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GifsService } from '../services/gifs.service';
 import { GifItem } from '../data/gif-item';
-import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
