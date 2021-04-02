@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
   gifs: GifItem[];
   isSearch: boolean = false;
   showLess: boolean = false;
+  isShow: boolean = false;
   searchTerm: string;
   constructor(private gifService: GifsService) {}
 
@@ -31,6 +32,7 @@ export class MainComponent implements OnInit {
   getSearchedGifs() {
     this.isSearch = true;
     this.showLess = false;
+    this.isShow = true;
     this.gifService.searchGifs(this.searchTerm).subscribe((data) => {
       this.gifs = data.data;
     });
@@ -38,6 +40,7 @@ export class MainComponent implements OnInit {
   getMoreSearchedGifs() {
     this.isSearch = true;
     this.showLess = true;
+    this.isShow = true;
     this.gifService.searchMoreGifs(this.searchTerm).subscribe((data) => {
       this.gifs = data.data;
     });
@@ -45,12 +48,12 @@ export class MainComponent implements OnInit {
 
   showSearchedGifs() {
     this.isSearch = true;
-
+    this.isShow = false;
     this.gifs = [];
   }
   showTrendingGifs() {
     this.isSearch = false;
-
+    this.isShow = false;
     this.getGifs();
     this.searchTerm = '';
   }
