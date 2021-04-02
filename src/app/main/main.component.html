@@ -1,1 +1,54 @@
-<p>main works!</p>
+<div class="container">
+  <nav class="nav mt-4">
+    <div class="navbar-brand">
+      <img src="../../assets/img/giphy.svg" alt="" />
+      <h2 class="mt-2">GIPHY</h2>
+    </div>
+
+    <div class="navbar-links">
+      <a class="nav-link active" aria-current="page" href="#">Reactions</a>
+      <a class="nav-link" href="#">Entertainment</a>
+      <a class="nav-link" href="#">Sports</a>
+
+      <a class="nav-link" href="#">Artists</a>
+      <a class="nav-link" href="#">:</a>
+    </div>
+
+    <div class="navbar-buttons">
+      <button class="btn nav-btn">Upload</button>
+      <button class="btn nav-btn">Create</button>
+    </div>
+
+    <div class="nav-item dropdown pl-2">
+      <button class="btn">👀</button>
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        user-name
+      </a>
+    </div>
+  </nav>
+
+  <div class="wrapper mb-5">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" />
+      <a class="btn" type="button" id="selectBtn"> Search </a>
+    </div>
+  </div>
+
+  <div class="gif-wrapper">
+    <div class="gif-item m-2" *ngFor="let gif of gifs">
+      <img src="{{ gif.images.downsized.url }}" alt="" />
+    </div>
+  </div>
+
+
+
+</div>
+
+

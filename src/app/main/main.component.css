@@ -1,0 +1,82 @@
+.input-group {
+  height: 20px;
+}
+
+.nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links a {
+  border-bottom: 7px solid #32aefb !important;
+  margin: 0px 5px;
+  padding-bottom: 0;
+  color: white;
+  font-weight: 700;
+}
+
+.navbar-links a:hover {
+  background-color: #32aefb;
+}
+.navbar a {
+  color: white;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-brand h2 {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.nav-btn {
+  background-color: rgb(29, 148, 228);
+  color: white;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.dropdown {
+  display: flex;
+}
+
+.dropdown a {
+  color: white;
+  font-weight: 700;
+  background-color: #3e3e3e;
+  padding: 10px 25px;
+}
+.dropdown button {
+  background-color: tomato;
+  margin-left: 7px;
+  padding: 7px;
+}
+
+.gif-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gif-item {
+  /* height: 50px;
+  width: 300px; */
+}
+
+.gif-item img {
+  height: 200px;
+}
