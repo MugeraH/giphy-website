@@ -6,8 +6,14 @@
     </div>
 
     <div class="navbar-links">
-      <a class="nav-link active" aria-current="page" href="#">Trending</a>
-      <a class="nav-link" href="#">Search</a>
+      <a
+        class="nav-link active"
+        aria-current="page"
+        href="#"
+        (click)="showTrendingGifs()"
+        >Trending</a
+      >
+      <a class="nav-link" href="#" (click)="showSearchedGifs()">Search</a>
     </div>
 
     <div class="navbar-buttons">
@@ -32,22 +38,62 @@
 
   <div class="wrapper mb-5 mt-2">
     <div class="input-group mb-3">
-      <input type="text" class="form-control" />
-      <a class="btn" type="button" id="selectBtn">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="searchTerm"
+        name="searchTerm"
+      />
+      <a class="btn" type="submit" id="selectBtn" (click)="getSearchedGifs()">
         <img src="../../assets/img/search .png" alt="" />
       </a>
     </div>
   </div>
 
-  <div class="container">
-    <div class="title">
+  <div class="container mb-3">
+    <div class="title" *ngIf="!isSearch">
       <img src="../../assets/img/trend.png" alt="" />
       <h3>Trending</h3>
+    </div>
+    <div class="title" *ngIf="isSearch">
+      <h3>Your results</h3>
     </div>
     <div class="gif-wrapper">
       <div class="gif-item m-2" *ngFor="let gif of gifs">
         <img src="{{ gif.images.downsized.url }}" alt="" />
       </div>
     </div>
+  </div>
+  <div class="button mb-4" *ngIf="!isSearch">
+    <button
+      *ngIf="!showLess"
+      class="btn btn-outline-light"
+      (click)="getMoreGifs()"
+    >
+      Load More
+    </button>
+    <button
+      *ngIf="showLess"
+      class="btn btn-outline-light"
+      (click)="getGifs()"
+    >
+      Load Less
+    </button>
+  </div>
+  <div class="button mb-4" *ngIf="isSearch">
+    <button
+      *ngIf="!showLess"
+      class="btn btn-outline-light"
+      (click)=" getMoreSearchedGifs()"
+    >
+      Load More
+    </button>
+    <button
+      *ngIf="showLess"
+      class="btn btn-outline-light"
+      (click)="getSearchedGifs()"
+    >
+      Load Less
+    </button>
   </div>
 </div>
