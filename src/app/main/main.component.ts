@@ -12,11 +12,13 @@ export class MainComponent implements OnInit {
   isSearch: boolean = false;
   showLess: boolean = false;
   isShow: boolean = false;
+  isLoading: boolean = true;
   searchTerm: string;
   constructor(private gifService: GifsService) {}
 
   getGifs() {
     this.gifService.getGifs().subscribe((data) => {
+      this.isLoading = false;
       this.showLess = false;
       this.gifs = data.data;
     });

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!isLoading">
   <nav class="nav mt-4">
     <div class="navbar-brand">
       <img src="../../assets/img/giphy.svg" alt="" />
@@ -60,7 +60,7 @@
       <h3>Trending</h3>
     </div>
     <div class="title" *ngIf="isSearch && isShow">
-      <h3> Results : {{ searchTerm }}</h3>
+      <h3>Results : {{ searchTerm }}</h3>
     </div>
     <div class="gif-wrapper">
       <div class="gif-item m-2" *ngFor="let gif of gifs">
@@ -97,3 +97,7 @@
     </button>
   </div>
 </div>
+
+<app-spinner *ngIf="isLoading">
+  
+</app-spinner>
